@@ -1,0 +1,124 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{3197618f-7b06-4e3a-8950-7a870d13f8b6}",
+  "theme": "Catppuccin Mocha",
+  "copyOnSelect": true,
+  "copyFormatting": "none",
+  "trimBlockSelection": true,
+  "initialCols": 160,
+  "initialRows": 42,
+  "tabWidthMode": "titleLength",
+  "showTabsInTitlebar": true,
+  "useAcrylicInTabRow": false,
+  "confirmCloseAllTabs": true,
+  "startOnUserLogin": false,
+  "profiles": {
+    "defaults": {
+      "font": { "face": "PlemolJP Console NF", "size": 12.5, "cellHeight": "1.2" },
+      "colorScheme": "Catppuccin Mocha",
+      "padding": "14, 10, 14, 10",
+      "cursorShape": "bar",
+      "historySize": 50000,
+      "bellStyle": ["window", "taskbar"],
+      "antialiasingMode": "cleartype",
+      "scrollbarState": "visible",
+      "snapOnInput": true,
+      "startingDirectory": "%USERPROFILE%"
+    },
+    "list": [
+      {
+        "guid": "{3197618f-7b06-4e3a-8950-7a870d13f8b6}",
+        "name": "PowerShell",
+        "commandline": "pwsh.exe -NoLogo",
+        "icon": "ms-appx:///ProfileIcons/pwsh.png",
+        "tabColor": "#89b4fa"
+      },
+      {
+        "guid": "{1cc08cfd-3c0e-495d-a864-6f955e333b10}",
+        "name": "Claude",
+        "commandline": "pwsh.exe -NoLogo -NoExit -Command claude",
+        "icon": "✨",
+        "tabColor": "#fab387"
+      },
+      {
+        "guid": "{51a06267-1b1e-4996-bef5-19c37f0f0d44}",
+        "name": "Codex",
+        "commandline": "pwsh.exe -NoLogo -NoExit -Command codex",
+        "icon": "🧩",
+        "tabColor": "#a6e3a1"
+      },
+      {
+        "guid": "{4cef4a51-e0a2-4df2-929e-bced4acca6d3}",
+        "name": "Windows PowerShell 5.1",
+        "commandline": "powershell.exe -NoLogo",
+        "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+        "tabColor": "#6c7086"
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "コマンド プロンプト",
+        "commandline": "cmd.exe",
+        "hidden": true
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "name": "Catppuccin Mocha",
+      "background": "#1E1E2E",
+      "foreground": "#CDD6F4",
+      "cursorColor": "#F5E0DC",
+      "selectionBackground": "#585B70",
+      "black": "#45475A",
+      "red": "#F38BA8",
+      "green": "#A6E3A1",
+      "yellow": "#F9E2AF",
+      "blue": "#89B4FA",
+      "purple": "#F5C2E7",
+      "cyan": "#94E2D5",
+      "white": "#BAC2DE",
+      "brightBlack": "#585B70",
+      "brightRed": "#F38BA8",
+      "brightGreen": "#A6E3A1",
+      "brightYellow": "#F9E2AF",
+      "brightBlue": "#89B4FA",
+      "brightPurple": "#F5C2E7",
+      "brightCyan": "#94E2D5",
+      "brightWhite": "#A6ADC8"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Catppuccin Mocha",
+      "tab": {
+        "background": "#1E1E2EFF",
+        "unfocusedBackground": "#11111BFF",
+        "showCloseButton": "hover"
+      },
+      "tabRow": {
+        "background": "#181825FF",
+        "unfocusedBackground": "#11111BFF"
+      },
+      "window": { "applicationTheme": "dark", "useMica": false }
+    }
+  ],
+  "actions": [
+    { "command": { "action": "copy", "singleLine": false }, "id": "User.copy" },
+    { "command": "paste", "id": "User.paste" },
+    { "command": "find", "id": "User.find" },
+    { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "id": "User.splitDuplicate" },
+    { "command": { "action": "newTab", "profile": "Claude" }, "id": "User.newClaude" },
+    { "command": { "action": "newTab", "profile": "Codex" }, "id": "User.newCodex" },
+    { "command": { "action": "globalSummon", "name": "_quake", "dropdownDuration": 150 }, "id": "User.quake" }
+  ],
+  "keybindings": [
+    { "id": "User.copy", "keys": "ctrl+c" },
+    { "id": "User.paste", "keys": "ctrl+v" },
+    { "id": "User.find", "keys": "ctrl+shift+f" },
+    { "id": "User.splitDuplicate", "keys": "alt+shift+d" },
+    { "id": "User.newClaude", "keys": "alt+shift+c" },
+    { "id": "User.newCodex", "keys": "alt+shift+x" },
+    { "id": "User.quake", "keys": "win+sc(41)" }
+  ]
+}
